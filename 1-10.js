@@ -21,12 +21,72 @@
 //如：abcabcbb -->abs   长度3
 //    bbbbbb  -->b     长度1
 //    pwwkew  -->wke   长度3  去重后pwke  但pwke不是pwwkew的子串
-var str = 'abcabcbb';
-//思路：去重得单字符，组合新串，判断是否子串，判断是否最长
-var temparr = new Array();
-for (var i = 0; i < str.length; i++) {
-    var s = str.charAt(i);
-    for (var j = 0; j < temparr.length; j++) {
-        if (temparr[j] == s) {} else {}
-    }
-}
+
+// window.onload = function() {
+
+//     var str = 'pwwkew';
+
+//     //思路：去重得单字符，组合新串，判断是否子串，判断是否最长
+//     var temparr = new Array();
+//     for (var i = 0; i < str.length; i++) {
+//         var s = str.charAt(i);
+//         if (temparr.indexOf(s) == '-1') {
+//             temparr.push(s);
+//         }
+//     }
+//     var newstrarr = new Array();
+//     if (temparr) {
+//         var maxLength = 0;
+//         var maxStr = "";
+//         var newstrarr = getChildList(temparr);
+//         for (var j = 0; j < newstrarr.length; j++) {
+//             if (str.indexOf(newstrarr[j]) != -1) {
+//                 if (newstrarr[j].length >= maxLength) {
+//                     maxLength = newstrarr[j].length;
+//                     maxStr += "——" + newstrarr[j];
+//                 }
+//             }
+//         }
+//         console.log(str);
+//         console.log(temparr);
+//         console.log(newstrarr);
+//         console.log(maxStr);
+//         console.log(maxLength);
+//     }
+//     //传入一个数组获取到这个数组的子集()
+//     function getChildList(temparr) { //c d
+//         var newstrarr = new Array();
+
+//         for (var j = 1; j <= temparr.length; j++) {
+
+//             for (var n = 1; n <= j; n++) {
+
+//                 for (var m = 0; m < temparr.length; m++) {
+//                     if (newstrarr.indexOf(temparr[m]) == -1) {
+//                         newstrarr.push(temparr[m]);
+//                     } else {
+//                         var temparr1 = new Array();
+//                         for (var z = 0; z < temparr.length; z++) {
+//                             temparr1[z] = temparr[z];
+//                         }
+//                         temparr1.splice(m, 1);
+//                         var children2 = getChildList(temparr1);
+//                         for (var y = 0; y < children2.length; y++) {
+//                             if (newstrarr.indexOf(temparr[m] + children2[y]) == -1) {
+//                                 newstrarr.push(temparr[m] + children2[y]);
+//                             }
+//                         }
+
+//                     }
+
+//                 }
+
+//             }
+
+//         }
+
+//         return newstrarr;
+//     }
+// }
+
+4.
